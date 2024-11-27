@@ -1,0 +1,42 @@
+import {Model, DataTypes} from 'sequelize'
+import { sequelize } from '../instances/mysql'
+
+export interface GeralInstance extends Model{
+    id_tipo_lesoes:number,
+    PD:  "Hálux" | "2°" | "3°" | "4°" | "5°"
+    PE: "Hálux" | "2°" | "3°" | "4°" | "5°"
+}
+  
+
+
+
+
+
+export const Geral= sequelize.define<GeralInstance>("Produto,",{
+    id:{
+        primaryKey:true,
+        type:DataTypes.INTEGER
+    },
+    PD:{
+        type: DataTypes.ENUM( "Hálux","2°","3°", "4°","5°"),
+        allowNull: false, 
+    },
+    PE:{
+        type: DataTypes.ENUM("Hálux","2°","3°", "4°","5°"),
+        allowNull: false, 
+    },
+
+    
+
+
+    
+    
+  
+    
+    
+    
+    
+},{
+    tableName:'tipos_artelho',
+    timestamps:false
+})
