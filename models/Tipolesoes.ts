@@ -1,7 +1,7 @@
 import {Model, DataTypes} from 'sequelize'
 import { sequelize } from '../instances/mysql'
 
-export interface GeralInstance extends Model{
+export interface tipolesoesInstance extends Model{
     id_tipo_lesoes:number,
     descricao: "Bromidrose" | "Hidrose" | "Desidrose" | "Isquemia" | "Mal Perfurante" | "Edema" | "Tínea" | "Psoríase" | "Tungíase"| "Verruga Plantar" | "Calo Dorsal" | "Querotose"| "Calo Plantar"| "Hiperqueratose"|"Calo Interdigital"
 }
@@ -11,7 +11,7 @@ export interface GeralInstance extends Model{
 
 
 
-export const Geral= sequelize.define<GeralInstance>("Produto,",{
+export const lesoes = sequelize.define<tipolesoesInstance>("Produto,",{
     id:{
         primaryKey:true,
         type:DataTypes.INTEGER

@@ -1,7 +1,7 @@
 import {Model, DataTypes} from 'sequelize'
 import { sequelize } from '../instances/mysql'
 
-export interface GeralInstance extends Model{
+export interface tiposperfusaoInstance extends Model{
     id_tipo_lesoes:number,
     PD:  "Normal" | "Pálido" | "Cianótico",
     PE:"Normal" | "Pálido" | "Cianótico"
@@ -12,7 +12,7 @@ export interface GeralInstance extends Model{
 
 
 
-export const Geral= sequelize.define<GeralInstance>("Produto,",{
+export const perfusao= sequelize.define<tiposperfusaoInstance>("Produto,",{
     id:{
         primaryKey:true,
         type:DataTypes.INTEGER
